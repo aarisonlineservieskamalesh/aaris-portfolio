@@ -1,157 +1,82 @@
+import { MapPin, MessageCircle, Search, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 import { badges, services } from "./HeroData";
 import ServiceCard from "./HeroServiceCard";
-import {
-  MapPin,
-  MessageCircle,
-  Search,
-  Sparkles,
-} from "lucide-react";
+import { Badge } from "../common/Badge";
+import { Button } from "../common/Button";
+import { Section } from "../common/Section";
+import { useLanguage } from "../../i18n";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-100 min-h-screen">
+    <Section className="hero-gradient overflow-hidden border-b border-[rgba(56,189,248,0.24)]" innerClassName="relative z-10 grid min-h-[calc(100vh-84px)] items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+      <div>
+        <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.28 }}>
+          <Badge tone="amber">
+            <Sparkles size={14} />
+            {t("online.badge")}
+          </Badge>
+        </motion.div>
 
-      {/* Background Blur */}
-      <div className="absolute -top-40 -left-32 h-[500px] w-[500px] rounded-full bg-sky-300/30 blur-[130px]" />
+        <motion.h1
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.32, delay: 0.08 }}
+          className="mt-6 text-balance text-4xl font-extrabold leading-tight sm:text-5xl"
+        >
+          {t("online.heroTitle")}
+        </motion.h1>
 
-      <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-cyan-300/30 blur-[130px]" />
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.32, delay: 0.16 }}
+          className="mt-5 max-w-xl text-base leading-8 text-[var(--slate)] sm:text-lg"
+        >
+          {t("online.heroDesc")}
+        </motion.p>
 
-      {/* Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff70_1px,transparent_1px),linear-gradient(to_bottom,#ffffff70_1px,transparent_1px)] bg-[size:70px_70px]" />
-
-      <div className="relative container mx-auto grid min-h-screen items-center gap-20 px-6 py-24 lg:grid-cols-2">
-
-        {/* LEFT */}
-
-        <div>
-
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-300 bg-white px-5 py-2 shadow-lg">
-
-            <Sparkles className="h-5 w-5 text-sky-600" />
-
-            <span className="font-medium text-sky-700">
-              Trusted Government Service Center
+        <div className="mt-7 flex flex-wrap gap-3">
+          {badges.map((item) => (
+            <span key={item.text} className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--paper)] px-3 py-2 text-sm font-semibold text-[var(--slate)]">
+              <item.icon size={16} className="text-[var(--teal)]" />
+              {item.text}
             </span>
-
-          </div>
-
-          {/* Badges */}
-
-          <div className="mt-8 flex flex-wrap gap-3">
-
-            {badges.map((item) => (
-
-              <div
-                key={item.text}
-                className="flex items-center gap-2 rounded-full border border-sky-100 bg-white px-4 py-2 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
-              >
-
-                <item.icon
-                  size={16}
-                  className="text-sky-600"
-                />
-
-                <span className="text-sm font-medium text-slate-700">
-                  {item.text}
-                </span>
-
-              </div>
-
-            ))}
-
-          </div>
-
-          {/* Heading */}
-
-          <h1 className="mt-10 text-5xl font-black leading-tight text-slate-900 lg:text-7xl">
-
-            All Government
-
-            <span className="block text-sky-600">
-              Online Services
-            </span>
-
-          </h1>
-
-          <p className="mt-8 max-w-xl text-lg leading-9 text-slate-600">
-
-            Aadhaar • Ration Card • Passport • Certificates • MSME • GST •
-            FSSAI • Patta • Website Development and 55+ Online Services under
-            one roof.
-
-          </p>
-
-          {/* Address */}
-
-          <div className="mt-8 flex items-center gap-3 rounded-2xl border border-sky-100 bg-white p-4 shadow-lg w-fit">
-
-            <div className="rounded-xl bg-sky-100 p-3">
-
-              <MapPin className="text-sky-600" />
-
-            </div>
-
-            <div>
-
-              <p className="font-semibold text-slate-800">
-
-                AARIS Online Services
-
-              </p>
-
-              <p className="text-sm text-slate-500">
-
-                No.3 Pondy Tindivanam Main Road,
-                Thiruchitrambalam Kootroad.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* Buttons */}
-
-          <div className="mt-10 flex flex-wrap gap-5">
-
-            <button className="rounded-2xl bg-sky-500 px-8 py-4 font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-sky-600">
-
-              <MessageCircle className="mr-2 inline h-5 w-5" />
-
-              WhatsApp Us
-
-            </button>
-
-            <button className="rounded-2xl border border-sky-200 bg-white px-8 py-4 font-semibold text-sky-700 shadow-lg transition hover:-translate-y-1 hover:bg-sky-50">
-
-              <Search className="mr-2 inline h-5 w-5" />
-
-              Browse Services
-
-            </button>
-
-          </div>
-
-        </div>
-
-        {/* RIGHT */}
-
-        <div className="space-y-5">
-
-          {services.map((item) => (
-
-            <ServiceCard
-              key={item.title}
-              {...item}
-            />
-
           ))}
-
         </div>
 
+        <div className="mt-7 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4">
+          <div className="flex gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[rgba(30,138,130,0.12)] text-[var(--teal)]">
+              <MapPin />
+            </div>
+            <div>
+              <p className="font-bold">{t("common.brand")}</p>
+              <p className="mt-1 text-sm leading-6 text-[var(--slate)]">{t("common.address")}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button href="https://wa.me/918825564290" target="_blank" rel="noreferrer" variant="whatsapp">
+            <MessageCircle size={18} />
+            {t("nav.whatsapp")}
+          </Button>
+          <Button href="#services" variant="secondary">
+            <Search size={18} />
+            {t("common.explore")}
+          </Button>
+        </div>
       </div>
 
-    </section>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {services.map((item) => (
+          <ServiceCard key={item.title} {...item} />
+        ))}
+      </div>
+    </Section>
   );
 };
 

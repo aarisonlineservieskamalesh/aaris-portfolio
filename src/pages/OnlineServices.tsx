@@ -4,7 +4,7 @@ import HowItWorks from "../components/online-services/HowItWorks";
 import WhyChooseUs from "../components/online-services/WhyChooseUs";
 import CustomerReviews from "../components/online-services/CustomerReviews";
 import ContactCTA from "../components/online-services/ContactCTA";
-import Footer  from "../components/online-services/Footer";
+import FAQ from "../components/online-services/FAQ";
 
 const OnlineServices = () => {
   return (
@@ -14,8 +14,8 @@ const OnlineServices = () => {
       <HowItWorks />
       <WhyChooseUs />
       <CustomerReviews />
+      <FAQ />
       <ContactCTA />
-       <Footer />
     </>
   );
 };

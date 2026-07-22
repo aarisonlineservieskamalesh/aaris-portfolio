@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "businesses": "Businesses",
+    "onlineServices": "Online Services",
+    "mobiles": "Mobiles",
+    "homeAppliances": "Home Appliances",
+    "toursTravels": "Tours & Travels",
+    "contact": "Contact",
+    "call": "Call",
+    "whatsapp": "WhatsApp"
+  },
+  "common": {
+    "brand": "AARIS Group",
+    "portal": "Online Service Portal",
+    "explore": "Explore Services",
+    "contact": "Contact Us",
+    "learnMore": "Learn More",
+    "workingHours": "Mon - Sat, 9:30 AM - 8:00 PM",
+    "phone": "+91 88255 64290",
+    "phoneAlt": "+91 76959 37030",
+    "address": "Azad Nagar, Suramangalam, Salem - 636005, Tamil Nadu",
+    "serviceArea": "Tamil Nadu Service Support",
+    "search": "Search services..."
+  },
+  "home": {
+    "eyebrow": "Trusted multi-business service group",
+    "title": "A practical service portal for everyday customer needs.",
+    "desc": "AARIS Group brings government online services, mobile support, home appliances and travel booking under one reliable local brand.",
+    "primary": "Explore Businesses",
+    "secondary": "WhatsApp Us",
+    "businessTitle": "Choose Your AARIS Service",
+    "businessDesc": "Fast access to the right team, documents and support.",
+    "trustTitle": "Built for local trust",
+    "contactTitle": "Need help today?",
+    "contactDesc": "Call or WhatsApp AARIS Group for document guidance, booking support or service availability."
+  },
+  "businesses": {
+    "title": "Explore Our Businesses",
+    "desc": "One local brand with focused service branches for digital services, mobile needs, appliances and travel.",
+    "breadcrumb": "Home / Businesses"
+  },
+  "online": {
+    "title": "Government Online Services",
+    "desc": "Apply, update, track and complete essential government services with document guidance and local support.",
+    "heroTitle": "Government online services made clear and local.",
+    "heroDesc": "Aadhaar, PAN, ration card, certificates, passport, GST, MSME, land records and website support with one trusted service desk.",
+    "badge": "Verified service assistance",
+    "services": "Popular Services",
+    "servicesDesc": "Search by service type or browse the common requests customers ask for every day.",
+    "how": "How It Works",
+    "howDesc": "Simple steps from first call to final certificate or acknowledgement.",
+    "why": "Why Choose AARIS?",
+    "whyDesc": "Local support, clear document checklists and regular application updates.",
+    "reviews": "Customer Reviews",
+    "reviewsDesc": "Feedback from customers who trusted our service support.",
+    "faq": "Frequently Asked Questions",
+    "faqDesc": "Quick answers before you call or visit.",
+    "ctaTitle": "Ready to apply for your online service?",
+    "ctaDesc": "Send a WhatsApp message or call us. We will guide you with documents, fees and expected process."
+  },
+  "pages": {
+    "mobilesTitle": "AARIS Mobiles",
+    "mobilesDesc": "Phones, accessories, recharge, SIM support and repair guidance.",
+    "appliancesTitle": "AARIS Home Appliances",
+    "appliancesDesc": "TV, AC, fridge, washing machine and home appliance sales or support.",
+    "travelsTitle": "AARIS Tours & Travels",
+    "travelsDesc": "Bus, train, flight booking and holiday travel assistance."
+  },
+  "footer": {
+    "about": "Your trusted local digital service hub in Salem, Tamil Nadu.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All Rights Reserved."
+  }
+}

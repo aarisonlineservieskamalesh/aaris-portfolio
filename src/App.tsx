@@ -6,22 +6,30 @@ import OnlineServices from "./pages/OnlineServices";
 import Mobiles from "./pages/Mobiles";
 import HomeAppliances from "./pages/HomeAppliances";
 import ToursTravels from "./pages/ToursTravels";
+import { Header } from "./components/layout/Header";
+import { Footer } from "./components/layout/Footer";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-      <Route path="/businesses" element={<Businesses />} />
+          <Route path="/businesses" element={<Businesses />} />
 
-      <Route path="/online-services" element={<OnlineServices />} />
+          <Route path="/online-services" element={<OnlineServices />} />
 
-      <Route path="/mobiles" element={<Mobiles />} />
+          <Route path="/mobiles" element={<Mobiles />} />
 
-      <Route path="/home-appliances" element={<HomeAppliances />} />
+          <Route path="/home-appliances" element={<HomeAppliances />} />
 
-      <Route path="/tours-travels" element={<ToursTravels />} />
-    </Routes>
+          <Route path="/tours-travels" element={<ToursTravels />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
 
